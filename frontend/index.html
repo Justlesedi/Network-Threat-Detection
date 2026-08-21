@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krypt - Network Threat Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1> KRYPT</h1>
+                <p>Advanced Network Threat Detection</p>
+            </div>
+            <div class="status" id="status">
+                <span class="status-indicator"></span>
+                <span id="status-text">Ready</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="scan-section">
+                <button class="scan-btn" id="scanBtn" onclick="startScan()">
+                    <span class="scan-icon">⚙️</span> START NETWORK SCAN
+                </button>
+                <div class="scan-progress" id="scanProgress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="scanStatus">Scanning...</p>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-label">Connected</div>
+                    <div class="stat-value" id="stat-devices">0</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-label">Foreign Devices</div>
+                    <div class="stat-value" id="stat-suspicious">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Alerts</div>
+                    <div class="stat-value" id="stat-alerts">0</div>
+                </div>
+                <div class="stat-card" id="threat-card">
+                    <div class="stat-label">Threat Level</div>
+                    <div class="stat-value" id="threat-level">SAFE</div>
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Network Devices</h2>
+                    </div>
+                    <div class="device-list" id="device-list">
+                        <p class="loading">Awaiting scan...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Security Alerts</h2>
+                    </div>
+                    <div class="alert-list" id="alert-list">
+                        <p class="loading">No alerts</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>KRYPT v1.0 | Premium Network Defense System</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
